@@ -1,0 +1,10 @@
+services:
+  domotz-collector:
+    image: "domotz/domotz-collector"
+    network_mode: "host"
+    container_name: domotz-collector
+    volumes:
+      - /domotz-collector/config/domotz.json:/opt/domotz/etc/domotz.json
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
