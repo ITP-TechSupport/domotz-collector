@@ -7,4 +7,4 @@ services:
       - /domotz-collector/config/domotz.json:/opt/domotz/etc/domotz.json
     cap_add:
       - NET_ADMIN
-    restart: unless-stopped
+    restart: always
